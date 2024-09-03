@@ -1,0 +1,70 @@
+/* src/components/SellingPricePage.module.css */
+
+.sellingPriceContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Full viewport height */
+    padding: 0 20px; /* Responsive padding */
+    box-sizing: border-box; /* Include padding in the total width and height */
+  
+    overflow: hidden; /* Prevent scrolling */
+}
+
+.sellingPriceContainer h2 {
+    color: #787878;
+  }
+
+.shadowBox {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
+    padding: 20px;
+    background-color: #fff; /* White background for contrast */
+    width: 100%; /* Full width inside container */
+    width: 500px; /* Maximum width for larger screens */
+    height: auto; /* Adjust height automatically */
+    box-sizing: border-box; /* Ensure padding doesn't overflow */
+    text-align: center; /* Center text and button */
+    position: relative; /* Ensure proper positioning */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.successImage {
+    /* Full width for the image */
+    border-radius: 10px; /* Rounded corners */
+    margin-bottom: 20px; /* Spacing below the image */
+    max-height: 300px; /* Limit height to avoid overflow */
+    object-fit: cover; /* Maintain aspect ratio */
+    margin-left: 100px;
+}
+
+.priceInput {
+    width: 100%; /* Full width with padding */
+    max-width: 400px; /* Maximum width for the input */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    font-size: 16px;
+    background-color: #f0f0f0; /* Grey background */
+    color: #333; /* Dark text color for contrast */
+}
+
+.confirmButton {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ff6600; /* Orange background */
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.confirmButton:hover {
+    background-color: #e65c00; /* Darker orange on hover */
+    color: #fff;
+}

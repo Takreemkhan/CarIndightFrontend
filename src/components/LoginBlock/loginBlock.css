@@ -1,0 +1,114 @@
+/* Overlay */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+  backdrop-filter: blur(5px); /* Blurs the background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Ensures overlay is above other content */
+}
+
+/* Main container */
+.modal-form {
+  background-image: url('https://i.pinimg.com/564x/8f/70/eb/8f70ebcf48b9a18ffd219d80ce015aa3.jpg'); /* Replace with your image path */
+  background-size: cover; /* Make the image cover the entire container */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Prevent the image from repeating */
+  padding: 40px; /* Increased padding for larger form area */
+  border-radius: 10px; /* Optional: Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Shadow for better visibility */
+  position: relative;
+  width: 90%; /* Adjust based on your design */
+  max-width: 500px; /* Adjust based on your design */
+  height:400px; /* Automatically adjust height based on content */
+  
+  
+  
+}
+
+/* Close button */
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  color: red;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Header */
+.modal-form h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333;
+}
+
+/* Input fields */
+.modal-form input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+  opacity: 0.7;
+}
+
+/* Buttons */
+.modal-form button {
+  width: 100%;
+  padding: 10px;
+  margin-top:10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+.modal-form button:hover {
+  background-color: #0056b3;
+}
+
+/* Error and Success messages */
+.error {
+  color: red;
+  margin-top: 10px;
+  font-size:18px;
+}
+
+.success {
+  color: green;
+  margin-top: 10px;
+  font-size:18px;
+}
+
+/* OTP verification block */
+.otp-block {
+  display: flex;
+  justify-content:center;
+  margin-top: 20px; /* Add margin to separate from other elements */
+}
+
+.otp-block input {
+  width: 50px;
+  margin-right: 10px;
+  text-align: center;
+  padding: 10px; /* Ensure the input has enough padding */
+  border: 1px solid #ddd; /* Border to match other input fields */
+  border-radius: 4px; /* Match other input fields */
+  font-size: 16px; /* Font size consistent with other fields */
+}
+
+.Lheading{
+  color:#464646;
+  font-size:40px;
+}

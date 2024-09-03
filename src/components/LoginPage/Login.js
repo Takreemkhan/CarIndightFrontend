@@ -1,0 +1,223 @@
+import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faUser, faSearch, faGlobe, faChevronDown,faSignOutAlt,faChevronRight} from '@fortawesome/free-solid-svg-icons';
+import Dropdown from 'react-bootstrap/Dropdown';
+import { faShoppingCart, faCar, faCalendarAlt, faCarSide,faCog,faHome } from '@fortawesome/free-solid-svg-icons';
+
+import { useState } from 'react';
+import '../Header/Header.css';
+import { useAuth } from '../AuthContext';
+import { useNavigate } from 'react-router-dom';
+import './Login.css';
+import logo from '../Header/logo.png';
+import SellCarPage from '../SellCarPage/SellCarPage';
+
+const LoginPage = () => {
+const [activeDropdown, setActiveDropdown] = useState('');
+const navigate = useNavigate();
+const { isLoggedIn, logout } = useAuth();
+
+  const handleDropdownToggle = (dropdownKey) => {
+    setActiveDropdown((prevKey) => (prevKey === dropdownKey ? '' : dropdownKey));
+  };
+
+  const handleLogout = () => {
+    logout(); // Call logout function from context
+    navigate('/'); // Navigate back to the home page or header after logout
+  };
+  const handleSellCarClick = () => {
+    navigate('/sell-my-car');
+  };
+
+  return (
+    <>
+      <div className="header-container">
+        <div className="logo-container">
+          <img
+            src={logo}
+            alt="Website Logo"
+            className="website-logo"
+          />
+        </div>
+        <div className="search-container">
+          <input
+            type="text"
+            className="search-bar"
+            placeholder="Search here..."
+          />
+          <button className="search-button">
+            <FontAwesomeIcon icon={faSearch} />
+          </button>
+        </div>
+        <div className="language-login-container">
+          <div className="language-selector">
+            <FontAwesomeIcon icon={faGlobe} />
+            <select className="language-dropdown">
+              <option value="en">EN</option>
+              <option value="hi">HI</option>
+            </select>
+          </div>
+          <div className="login-register-container">
+            <FontAwesomeIcon icon={faUser} />
+            <Dropdown>
+                <Dropdown.Toggle variant="link" className="dropdown-toggle">
+                  Hello User
+                </Dropdown.Toggle>
+                <Dropdown.Menu className="dropdown-menu">
+                  <Dropdown.Item className="dropdown-item">View Profile</Dropdown.Item>
+                  <Dropdown.Item className="dropdown-item" onClick={handleLogout}>
+                    <FontAwesomeIcon icon={faSignOutAlt} /> Logout
+                  </Dropdown.Item>
+                </Dropdown.Menu>
+              </Dropdown>
+          </div>
+        </div>
+      </div>
+      
+      <div className="dropdowns-container">
+      {/* New Cars Dropdown */}
+        
+      <Dropdown className="dropdown">
+        <Dropdown.Toggle
+          variant="link"
+          className={`dropdown-toggle ${activeDropdown === 'newCars' ? 'active' : ''}`}
+          onClick={() => handleDropdownToggle('newCars')} style={{
+            textDecoration: 'none',  // Remove underline
+            color: 'black',          // Set text color to black
+          }}
+        >
+          New Car
+        </Dropdown.Toggle>
+        <Dropdown.Menu
+          show={activeDropdown === 'newCars'}
+          className="dropdown-menu"
+        >
+          <Dropdown.Item className="dropdown-item">Explore New Cars</Dropdown.Item>
+          <Dropdown.Item className="dropdown-item">Electric Cars</Dropdown.Item>
+          <Dropdown.Item className="dropdown-item">Upcoming Cars</Dropdown.Item>
+          <Dropdown.Item className="dropdown-item">New Launches</Dropdown.Item>
+          <Dropdown.Item className="dropdown-item">Car Insurance</Dropdown.Item>
+          <Dropdown.Item className="dropdown-item">Compare To Buy The Right Cars</Dropdown.Item>
+          <Dropdown.Item className="dropdown-item">New Car Offers & Discounts</Dropdown.Item>
+          <Dropdown.Item className="dropdown-item">Popular Brands</Dropdown.Item>
+          <Dropdown.Item className="dropdown-item">Popular Cars</Dropdown.Item>
+          <Dropdown.Item className="dropdown-item">Find Car Dealers</Dropdown.Item>
+          <Dropdown.Item className="dropdown-item">Find EV Charging Stations</Dropdown.Item>
+          <Dropdown.Item className="dropdown-item">Find Fuel Stations</Dropdown.Item>
+          <Dropdown.Item className="dropdown-item">Check Fuel Prices</Dropdown.Item>
+          <Dropdown.Item className="dropdown-item">New Car Loan</Dropdown.Item>
+        </Dropdown.Menu>
+      </Dropdown>
+
+      {/* Buy & Sell Used Cars Dropdown */}
+      <Dropdown className="dropdown">
+        <Dropdown.Toggle
+          variant="link"
+          className={`dropdown-toggle ${activeDropdown === 'usedCars' ? 'active' : ''}`}
+          onClick={() => handleDropdownToggle('usedCars')} style={{
+            textDecoration: 'none',  // Remove underline
+            color: 'black',          // Set text color to black
+          }}
+        >
+          Buy & Sell Used Cars
+          
+        </Dropdown.Toggle>
+        <Dropdown.Menu
+          show={activeDropdown === 'usedCars'}
+          className="dropdown-menu"
+        >
+          <Dropdown.Item className="dropdown-item">Buy Used Cars</Dropdown.Item>
+          <Dropdown.Item className="dropdown-item">Used Cars In Your City</Dropdown.Item>
+          <Dropdown.Item className="dropdown-item" onClick={handleSellCarClick}>Sell My Car</Dropdown.Item>
+          <Dropdown.Item className="dropdown-item">Used Car Valuation</Dropdown.Item>
+          <Dropdown.Item className="dropdown-item">Dealership Near Me</Dropdown.Item>
+          <Dropdown.Item className="dropdown-item">Loan Against Car</Dropdown.Item>
+          <Dropdown.Item className="dropdown-item">Used Car Loan</Dropdown.Item>
+          <Dropdown.Item className="dropdown-item">Car Insurance</Dropdown.Item>
+          <Dropdown.Item className="dropdown-item">Car Selling Tips</Dropdown.Item>
+        </Dropdown.Menu>
+      </Dropdown>
+
+      {/* News, Reviews & Videos Dropdown */}
+      <Dropdown className="dropdown">
+        <Dropdown.Toggle
+          variant="link"
+          className={`dropdown-toggle ${activeDropdown === 'news' ? 'active' : ''}`}
+          onClick={() => handleDropdownToggle('news')} style={{
+            textDecoration: 'none',  
+            color: 'black',          
+          }}
+        >
+          News, Reviews & Videos
+   
+        </Dropdown.Toggle>
+        <Dropdown.Menu
+          show={activeDropdown === 'news'}
+          className="dropdown-menu"
+        >
+          <Dropdown.Item className="dropdown-item">News & Top stories</Dropdown.Item>
+          <Dropdown.Item className="dropdown-item">Car Expert Reviews</Dropdown.Item>
+          <Dropdown.Item className="dropdown-item">Video Reviews</Dropdown.Item>
+          <Dropdown.Item className="dropdown-item">Visual Stories</Dropdown.Item>
+          <Dropdown.Item className="dropdown-item">User Reviews</Dropdown.Item>
+          <Dropdown.Item className="dropdown-item">Car Collection</Dropdown.Item>
+          <Dropdown.Item className="dropdown-item">Tips & Advice</Dropdown.Item>
+        </Dropdown.Menu>
+      </Dropdown>
+
+      {/* Car Services Dropdown */}
+      <Dropdown className="dropdown">
+        <Dropdown.Toggle
+          variant="link"
+          className={`dropdown-toggle ${activeDropdown === 'services' ? 'active' : ''}`}
+          onClick={() => handleDropdownToggle('services')} style={{
+            textDecoration: 'none',  
+            color: 'black',          
+          }}
+        >
+          Car Services
+       
+        </Dropdown.Toggle>
+        <Dropdown.Menu
+          show={activeDropdown === 'services'}
+          className="dropdown-menu"
+        >
+          <Dropdown.Item className="dropdown-item">Challan Check</Dropdown.Item>
+          <Dropdown.Item className="dropdown-item">Car Service History</Dropdown.Item>
+          <Dropdown.Item className="dropdown-item">RTO Records Info</Dropdown.Item>
+          <Dropdown.Item className="dropdown-item">Allianz Assistance RSA</Dropdown.Item>
+          <Dropdown.Item className="dropdown-item">SmartCar Connected Device</Dropdown.Item>
+          <Dropdown.Item className="dropdown-item">Revv Car Subscription</Dropdown.Item>
+          <Dropdown.Item className="dropdown-item">View All Services</Dropdown.Item>
+        </Dropdown.Menu>
+      </Dropdown>
+    </div>
+      
+      {/* Close the dropdowns-container div */}
+      <div class="profile-sidebar-wrapper">
+      <div className='profile-sidebar'>
+      <div className='Profileicon'>
+        <FontAwesomeIcon icon={faUser} />
+      </div>
+      <p style={{ fontWeight: 'bold', fontSize: '18px' }}>Takreem Khan</p>
+      <p>9584488688</p>
+      <p style={{ color: 'blue' }}>Link your e-mail or social account</p>
+      <ul  className="icon-list">
+        <li><FontAwesomeIcon icon={faShoppingCart} /> My Orders <FontAwesomeIcon icon={faChevronRight} className="list-icon" style={{marginLeft:'510px'}} /></li>
+        <li><FontAwesomeIcon icon={faCar} /> Shortlisted Vehicles <FontAwesomeIcon icon={faChevronRight} className="list-icon"  style={{marginLeft:'450px'}}  /></li>
+        <li><FontAwesomeIcon icon={faCalendarAlt} /> My Activity <FontAwesomeIcon icon={faChevronRight} className="list-icon"  style={{marginLeft:'510px'}}  /></li>
+        <li><FontAwesomeIcon icon={faCarSide} /> My Vehicles <FontAwesomeIcon icon={faChevronRight} className="list-icon"  style={{marginLeft:'500px'}}  /></li>
+        <li> <FontAwesomeIcon icon={faHome} /> My Garage <FontAwesomeIcon icon={faChevronRight} className="list-icon"  style={{marginLeft:'509px'}}  /></li>
+        <li><FontAwesomeIcon icon={faCog} /> Profile Settings <FontAwesomeIcon icon={faChevronRight} className="list-icon"  style={{marginLeft:'480px'}}  /></li>
+        <div onClick={handleLogout} className='logout'>
+          <FontAwesomeIcon icon={faSignOutAlt} /> Logout
+        </div>
+      </ul>
+    </div>
+</div>
+      
+    </>
+  );
+};
+
+export default LoginPage;

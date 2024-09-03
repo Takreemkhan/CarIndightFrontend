@@ -1,0 +1,135 @@
+/* Container for the whole page */
+
+  
+  /* Header section */
+  .sell-car-header {
+    margin-left: 180px;
+    margin-bottom: 20px;
+    margin-top: 60px;
+  }
+  
+  .sell-car-header h1 {
+    color: black;
+    font-size: 40px;
+    margin-bottom: 10px;
+    
+  }
+  
+  .sell-car-header p {
+    font-size: 20px;
+    color: #555;
+  }
+  
+  /* Benefits section */
+  .sell-car-benefits {
+    display: flex;
+    margin-left: 130px;
+  }
+  
+  .benefit {
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    width: 200px;
+    height: 150px;
+    margin: 10px;
+  }
+  
+  .benefit h4 {
+    color: #ff6f00;
+    margin-bottom: 10px;
+  }
+  
+  .benefit p {
+    font-size: 1rem;
+    color:black;
+  }
+  .advertisement-image{
+    width: 300px; /* Adjust the width as needed */
+    height: auto; /* Maintains the aspect ratio */
+  
+    margin-left: 860px;
+    margin-top: -400px;
+  }
+  
+  /* Footer section */
+  .sell-car-footer {
+  margin-left: 890px; /* This will shift the element to the right */
+  margin-top: -80px; /* Adjust this value to move the element upwards */
+}
+  .sell-car-footer p {
+    font-size: 1.2rem;
+    color: #ff6f00;
+    font-weight: bold;
+  }
+  .car-registration-form {
+    max-width: 600px;
+    height:500px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+  }
+  
+  .form-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .input-group {
+    margin-bottom: 20px;
+  }
+  
+  .input-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+  }
+  
+  .car-number-input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .button-group {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .sell-car-button, .check-price-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .sell-car-button {
+    background-color:#ff6600;
+    color: white;
+  }
+  
+  .sell-car-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .check-price-button {
+    background-color: #6c757d;
+    color: white;
+  }
+  
+  .check-price-button:hover {
+    background-color: #5a6268;
+  }
+  
+  .my-div {
+    background-color: rgb(239, 233, 234); /* Background color set to pink */
+  }
+  

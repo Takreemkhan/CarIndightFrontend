@@ -1,0 +1,63 @@
+.year-selector {
+    max-width: 400px;
+    margin: 0 auto;
+    margin-top:50px;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .year-selector h2{
+    color: #787878;
+      
+  }
+  
+  
+  .Searchbar {
+    margin-bottom: 10px;
+  }
+  
+  .Searchbar input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  
+  .year-list-container {
+    max-height: 400px;
+    overflow-y: auto;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 10px;
+  }
+  
+  .year-list {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .year-item {
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .year-item:hover {
+    background-color: #f0f0f0;
+    color:rgb(12, 206, 231);
+  }
+  
+  .year-item.selected {
+    background-color: #e0e0e0;
+    font-weight: bold;
+  }
+  
+  .no-results {
+    text-align: center;
+    color: #888;
+    padding: 10px;
+  }
+  

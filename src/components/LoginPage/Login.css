@@ -1,0 +1,92 @@
+/* profile-sidebar.css */
+
+
+.profile-sidebar {
+    flex: 1;
+    width: 700px; /* Increase this value to make the sidebar wider */
+    height: 600px; /* Set a specific height for the sidebar */
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position:absolute;
+    margin-left: 400px;
+    margin-top: 10px;
+  }
+  .Profileicon{
+    margin-bottom: 10px;
+    text-align:center ;
+    font-size: 40px;
+  }
+  
+  .profile-sidebar h3 {
+    color: #333;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    font-weight: 600;
+    text-align:center ;
+    font-weight: bold;
+  }
+  
+  .profile-sidebar p {
+    color: #555;
+    margin-bottom: 10px;
+    font-size: 1rem;
+    text-align:center ;
+  }
+  
+  .profile-sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .profile-sidebar ul li {
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    content: '>';
+  }
+  
+  .profile-sidebar ul li:hover {
+    background-color: #cacdcf;
+    color: #fff;
+  }
+  
+  .profile-sidebar ul li:last-child {
+    margin-bottom: 0;
+  }
+  .logout{
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: rgb(224, 221, 221);
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    text-align: center;
+  }
+
+
+
+
+  .icon-list {
+    list-style: none; /* Remove default list styling */
+    padding: 0;
+    margin: 0;
+  
+  }
+  
+  .icon-list li .fa-icon {
+    margin-right: 10px; /* Spacing between icon and text */
+  }
+  
+   
+  
+  
+  

@@ -1,0 +1,131 @@
+
+.filter-form-container {
+    width: 350px;
+    padding: 30px;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: absolute; 
+    left: 8%;
+    margin-top: 50px; 
+    z-index: 10; 
+}
+
+.heading{
+font-weight:bold;
+margin-left: 10px;
+font-size:30px;
+}
+
+.choice-button-group {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    padding: 10px;
+  }
+  
+  .choice-type-button {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #0c0c0c;
+    background-color: white;
+    color: black;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border-radius: 9px;
+    margin: 0 5px; /* Add margin between buttons */
+  }
+  
+  .choice-type-button:first-of-type {
+    margin-left: 0; /* Remove margin on the left of the first button */
+  }
+  
+  .choice-type-button:last-of-type {
+    margin-right: 0; /* Remove margin on the right of the last button */
+  }
+  
+  .choice-type-button.active {
+    background-color: black;
+    color: white;
+  }
+  
+  .choice-type-button:first-child {
+    border-right: none;
+  }
+  
+  
+  .filter-radio-group {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+ 
+  
+  .filter-radio-group label {
+    cursor: pointer;
+    color: black;
+  }
+  
+ 
+  .filter-dropdown-group {
+    margin-bottom: 20px;
+  }
+  
+  .filter-dropdown {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: white;
+    color: black;
+  }
+  
+
+  .filter-search-button {
+    width: 100%;
+    padding: 12px;
+    background-color: #ff6600;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .filter-search-button:hover {
+    background-color: #e55b00;
+  }
+  
+  .advanced-search-container {
+    margin-top: 20px;
+    margin-left: 145px;
+  }
+  
+  .advanced-search-button {
+    background: none;
+    border: none;
+    color: black;
+    font-size: 14px;
+    font-weight:500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+  }
+  
+  .advanced-search-button .arrow {
+    margin-left: 5px;
+    transition: transform 0.3s ease;
+  }
+  
+  
+  .advanced-search-section {
+    margin-top: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    background-color: #f8f9fa;
+    /* Add your advanced search section styling here */
+  }
+  

@@ -1,0 +1,82 @@
+/* ModelSelector.css */
+.Model {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: flex-start; /* Align items to start initially */
+    align-items: center;
+    background-color: #f5f5f5;
+    overflow: hidden; /* Prevent scrolling on body */
+    flex-direction: column; /* Column direction to allow vertical alignment */
+  }
+  
+  /* Add a top margin to create space at the top */
+  .model-selector-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* Full height to cover viewport */
+    width: 100%; /* Full width */
+    padding: 20px; /* Add padding if needed */
+    box-sizing: border-box; /* Ensure padding does not affect width/height */
+    position: relative; /* Keeps the container centered */
+    margin-top: 20px; /* Adds space at the top */
+  }
+  .model-selector-container h2 {
+    color: #787878;
+    
+  }
+  .shadow-box {
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    text-align: center;
+    min-width: 700px;
+    max-width: 90%;
+    position: relative; /* Keeps the shadow box centered */
+  }
+  
+  .searchBar {
+    width: 80%;
+    padding: 10px;
+    margin: 15px 0;
+    border: 1px solid #ccc;
+ 
+    font-size: 16px;
+  }
+  
+  .model-list-container {
+    max-height: 400px;
+    overflow-y: auto;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 10px;
+  }
+  .model-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    
+  }
+  
+  .model-item {
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ,color 0.3s;
+  }
+  
+  .model-item:hover {
+    background-color: #f0f0f0;
+    color:rgb(12, 206, 231);
+  }
+  
+  .error {
+    color: red;
+    margin-bottom: 10px;
+  }
+  

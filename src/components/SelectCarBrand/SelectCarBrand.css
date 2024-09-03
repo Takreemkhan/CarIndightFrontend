@@ -1,0 +1,60 @@
+.car-brand-container {
+  padding: 55px;
+  margin-left: 360px;
+  text-align: center;
+  
+}
+
+.car-brand-container h2 {
+  color: #787878;
+}
+
+.shadow-box {
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
+  padding: 20px;
+  background-color: #fff; /* White background for contrast */
+ 
+}
+
+.searchcontainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  position: relative; /* Ensure positioning context for the icon */
+  
+}
+
+.searchbar {
+  padding: 10px 10px 10px 40px; /* Add padding on the left to make space for the icon */
+  width: 1300px; /* Adjust width as needed */
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+.car-brand-wrapper {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr); /* Six items per row */
+  gap: 5px; /* Reduced gap between items */
+  max-height: 400px; /* Set maximum height for scrolling */
+  overflow-y: auto; /* Enable vertical scrolling */
+  padding: 1px; /* Adjust padding */
+  box-sizing: border-box; /* Ensure padding is included in element's width */
+  border: 1px solid #ccc; /* Optional: Add border for a clear edge */
+  background-color: #f9f9f9; /* Optional: Background color for better contrast */
+}
+
+.car-brand-item {
+  text-align: center;
+}
+
+.car-brand-logo {
+  max-width: 80px;
+  height: auto;
+}
+
+.car-brand-name {
+  margin-top: 5px;
+}

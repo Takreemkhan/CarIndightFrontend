@@ -1,0 +1,55 @@
+/* src/components/CityStateSelector.css */
+
+.city-state-selector-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Full viewport height */
+    padding: 0 20px; /* Responsive padding */
+  }
+  .city-state-selector-container h2 {
+    color: #787878;
+  }
+  .shadow-box {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
+    padding: 20px;
+    background-color: #fff; /* White background for contrast */
+    width: 100%; /* Full width inside container */
+    max-width: 600px; /* Maximum width for larger screens */
+    box-sizing: border-box; /* Ensure padding doesn't overflow */
+  }
+  .city-list-container {
+    max-height: 400px;
+    overflow-y: auto;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 10px;
+  }
+  .city-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .city-item {
+    cursor: pointer;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 5px 0;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .city-item:hover {
+    background-color: #f0f0f0;
+    color:rgb(12, 206, 231);
+  }
+  
+  .search_bar {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 15px;
+  }
+  
