@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './YearSelect.css';
-import ModelSelector from '../ModelSelector/ModelSelector';
+
 
 const YearSelector = ({ onYearSelect = () => {} }) => { // Default to a no-op function
   const [searchTerm, setSearchTerm] = useState('');

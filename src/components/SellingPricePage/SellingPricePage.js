@@ -1,7 +1,7 @@
 // src/components/SellingPricePage.js
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import styles from './SellingPricePage.css'; // Import CSS module
+import './SellingPricePage.css'; // Import CSS module
 
 const SellingPricePage = () => {
   const [price, setPrice] = useState('');

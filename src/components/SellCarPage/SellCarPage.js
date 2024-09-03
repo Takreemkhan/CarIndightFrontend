@@ -3,17 +3,17 @@ import './SellCarPage.css';
 import '../Header/Header.css';
 import { useNavigate } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faUser, faSearch, faGlobe, faChevronDown, faSignOutAlt, faChevronRight } from '@fortawesome/free-solid-svg-icons';
+import { faSearch, faGlobe, faUser, faSignOutAlt } from '@fortawesome/free-solid-svg-icons'; // Add this line
 import Dropdown from 'react-bootstrap/Dropdown';
 import Login from '../LoginBlock/LoginBlock';
 import logo from '../Header/logo.png';
-import SelectCarBrand from '../SelectCarBrand/SelectCarBrand';
+
 
 const SellCarPage = () => {
   const [activeDropdown, setActiveDropdown] = useState('');
   const [showLogin, setShowLogin] = useState(false);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
-  const [showSelectCarBrand, setShowSelectCarBrand] = useState(false);
+
   const [carNumber, setCarNumber] = useState('');
 
   const navigate = useNavigate();
@@ -71,9 +71,7 @@ const SellCarPage = () => {
     setCarNumber(e.target.value);
   };
 
-  const handleSellCar = () => {
-    alert('Sell My Car functionality to be implemented');
-  };
+ 
 
   const handleCheckPrice = () => {
     alert('Check Price functionality to be implemented');

@@ -1,20 +1,16 @@
-// OwnershipSelector.js
-
-import React, { useState, useContext } from 'react';
+import React, { useContext } from 'react';
 import { useNavigate } from 'react-router-dom'; // Import useNavigate
-import { BrandContext } from '../BrandContext';
+import { BrandContext } from '../BrandContext'; // Adjust the import path if necessary
 import './OwnershipSelector.css'; // Ensure this path is correct
 
 const OwnershipSelector = () => {
-  const [selectedOwnership, setSelectedOwnership] = useState('');
-  const { setSelectedOwnership: setContextOwnership } = useContext(BrandContext);
+  const { setSelectedOwnership } = useContext(BrandContext); // Extract from context
   const navigate = useNavigate(); // Initialize navigate function
 
   const handleOwnershipClick = (ownership) => {
-    setSelectedOwnership(ownership);
-    setContextOwnership(ownership); // Set selected ownership in context
+    setSelectedOwnership(ownership); // Use context function to set selected ownership
     localStorage.setItem('selectedOwnership', JSON.stringify(ownership)); // Save to local storage
-    navigate(`/KmDrivenSelector`); // Navigate to the new route, replace with your desired path
+    navigate('/KmDrivenSelector'); // Navigate to the new route, replace with your desired path
   };
 
   return (

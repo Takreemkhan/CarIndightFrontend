@@ -7,8 +7,6 @@ import './Header.css';
 import Slider from '../Slider/Slider';
 import CarSearchForm from '../carSearchBlock/CarSearchForm';
 import Login from '../LoginBlock/LoginBlock';
-import { useAuth } from '../AuthContext';
-import SellCarPage from '../SellCarPage/SellCarPage';
 import { useNavigate } from 'react-router-dom';
 import logo from './logo.png';
 

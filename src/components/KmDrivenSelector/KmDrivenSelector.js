@@ -1,11 +1,9 @@
-// KmDrivenSelector.js
-
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './KmDrivenSelector.css'; // Ensure this path is correct
 
 const KmDrivenSelector = () => {
-  const [selectedKm, setSelectedKm] = useState('');
+  const [selectedKm, setSelectedKm] = useState(null); // Define the state with useState
   const navigate = useNavigate();
 
   const kmRanges = [
@@ -34,18 +32,18 @@ const KmDrivenSelector = () => {
     <div className="km-driven-selector-container">
       <div className="shadow-box">
         <h2>Select KM Driven</h2>
-        <div className='km-list-container '>
-        <ul className="km-list">
-          {kmRanges.map((kmRange, index) => (
-            <li
-              key={index}
-              className="km-item"
-              onClick={() => handleKmClick(kmRange)}
-            >
-              {kmRange}
-            </li>
-          ))}
-        </ul>
+        <div className='km-list-container'>
+          <ul className="km-list">
+            {kmRanges.map((kmRange, index) => (
+              <li
+                key={index}
+                className={`km-item ${selectedKm === kmRange ? 'selected' : ''}`} // Add selected class if necessary
+                onClick={() => handleKmClick(kmRange)}
+              >
+                {kmRange}
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
     </div>

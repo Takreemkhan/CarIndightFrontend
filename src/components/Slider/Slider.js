@@ -3,9 +3,6 @@ import React, { useState } from 'react';
 import './Slider.css'; // Import custom CSS for styling
 
 import slider1 from './Images/slider1.jpg';
-import slider2 from './Images/slider2.jpg';
-import slider3 from './Images/slider3.jpg';
-
 const Slider = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
