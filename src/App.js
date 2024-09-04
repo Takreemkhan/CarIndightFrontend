@@ -29,7 +29,7 @@ const ProtectedRoute = ({ children }) => {
 };
 
 // export const api="http://localhost:3001";
-   export const api="https://carinsight.onrender.com";
+   export const api="https://carinsightbackend.onrender.com";
 function App() {
   return (
     <BrandProvider>
