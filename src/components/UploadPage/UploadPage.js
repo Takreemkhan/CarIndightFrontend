@@ -43,7 +43,7 @@ const UploadPage = () => {
 
     // Send the data to the server
     try {
-      await axios.post('http://localhost:3001/api/saveCarListing', storedData);
+      await axios.post(`${api}/api/saveCarListing`, storedData);
       navigate('/submit');
     } catch (error) {
       console.error('Error saving car listing:', error);
