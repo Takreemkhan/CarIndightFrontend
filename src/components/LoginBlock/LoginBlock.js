@@ -38,7 +38,7 @@ const LoginBlock = ({ onLoginSuccess }) => {
 
   const verifyOtp = async () => {
     try {
-      const response = await axios.post('http://localhost:3001/api/verify-otp', { phoneNumber, otp });
+      const response = await axios.post(`${api}/api/verify-otp`, { phoneNumber, otp });
       setSuccess(response.data.message);
       setError('');
       onLoginSuccess(); // Notify the parent component of successful login
