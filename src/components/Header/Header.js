@@ -44,6 +44,9 @@ const Header = () => {
   const handleSellCarClick = () => {
     navigate('/sell-my-car');
   };
+  const handleprofile = () => {
+    navigate('/login');
+  };
 
 
   return (
@@ -82,7 +85,7 @@ const Header = () => {
                   Hello User
                 </Dropdown.Toggle>
                 <Dropdown.Menu className="dropdown-menu">
-                  <Dropdown.Item className="dropdown-item">View Profile</Dropdown.Item>
+                  <Dropdown.Item className="dropdown-item" onClick={handleprofile} >View Profile</Dropdown.Item>
                   <Dropdown.Item className="dropdown-item" onClick={handleLogout}>
                     <FontAwesomeIcon icon={faSignOutAlt} /> Logout
                   </Dropdown.Item>
