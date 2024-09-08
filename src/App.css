@@ -1,18 +1,25 @@
+/* Main App container */
 .App {
   text-align: center;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+/* Logo styling */
 .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
 
+/* Reduce motion for users who prefer it */
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
 }
 
+/* Header styling */
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -22,17 +29,50 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
+/* Link styling */
 .App-link {
   color: #61dafb;
+  text-decoration: none;
+  transition: color 0.3s ease;
 }
 
+.App-link:hover {
+  color: #21a1f1;
+}
+
+/* Animation for logo spin */
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+/* Responsive media queries */
+@media screen and (max-width: 768px) {
+  .App-header {
+    font-size: calc(8px + 2vmin); /* Adjust font size for smaller screens */
+    padding: 15px; /* Adjust padding for smaller screens */
+  }
+
+  .App-logo {
+    height: 30vmin; /* Smaller logo for mobile */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .App-header {
+    font-size: calc(6px + 2vmin); /* Further adjust font size */
+    padding: 10px;
+  }
+
+  .App-logo {
+    height: 25vmin; /* Even smaller logo for very small devices */
   }
 }
