@@ -1,5 +1,6 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom'; // Added Navigate
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import { Container } from 'react-bootstrap';// Added Navigate
 import Header from './components/Header/Header';
 import { AuthProvider } from './components/AuthContext';
 import SellCarPage from './components/SellCarPage/SellCarPage';
@@ -35,6 +36,7 @@ function App() {
     <BrandProvider>
     <AuthProvider>
       <Router>
+     <Container fluid className="p-3">
         <Routes>
           {/* Protect the header route */}
           {<Route 
@@ -60,7 +62,7 @@ function App() {
           <Route path="/upload"           element={<UploadPage/>}/>
           <Route path="/submit"           element={<Congratulations/>}/>
         </Routes>
-        
+  </Container>
       </Router>
     </AuthProvider>
     </BrandProvider>
