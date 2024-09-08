@@ -4,12 +4,14 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  width: 100%;
 }
 
 /* Logo styling */
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+  max-width: 100%; /* Ensures logo scales within its container */
 }
 
 /* Reduce motion for users who prefer it */
@@ -31,6 +33,7 @@
   color: white;
   padding: 20px;
   box-sizing: border-box;
+  width: 100%; /* Ensures header takes full width */
 }
 
 /* Link styling */
@@ -54,25 +57,52 @@
   }
 }
 
-/* Responsive media queries */
-@media screen and (max-width: 768px) {
+/* Media Queries for Responsiveness */
+
+/* Tablet and small screens */
+@media screen and (max-width: 1024px) {
   .App-header {
-    font-size: calc(8px + 2vmin); /* Adjust font size for smaller screens */
-    padding: 15px; /* Adjust padding for smaller screens */
+    font-size: calc(8px + 2vmin);
+    padding: 15px;
   }
 
   .App-logo {
-    height: 30vmin; /* Smaller logo for mobile */
+    height: 35vmin;
   }
 }
 
-@media screen and (max-width: 480px) {
+/* Mobile landscape */
+@media screen and (max-width: 768px) {
   .App-header {
-    font-size: calc(6px + 2vmin); /* Further adjust font size */
+    font-size: calc(7px + 2vmin);
     padding: 10px;
   }
 
   .App-logo {
-    height: 25vmin; /* Even smaller logo for very small devices */
+    height: 30vmin;
+  }
+}
+
+/* Mobile portrait */
+@media screen and (max-width: 480px) {
+  .App-header {
+    font-size: calc(6px + 2vmin);
+    padding: 8px;
+  }
+
+  .App-logo {
+    height: 25vmin;
+  }
+}
+
+/* Extra small devices */
+@media screen and (max-width: 320px) {
+  .App-header {
+    font-size: calc(5px + 2vmin);
+    padding: 5px;
+  }
+
+  .App-logo {
+    height: 20vmin;
   }
 }
