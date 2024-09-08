@@ -1,114 +1,47 @@
-/* Main App container */
 .App {
   text-align: center;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  width: 100%;
 }
 
-/* Logo styling with Grid for better scaling */
 .App-logo {
   height: 40vmin;
   pointer-events: none;
-  max-width: 100%;
-  display: grid;
-  place-items: center; /* Centers the logo inside the grid */
 }
 
-/* Animation for the logo (with reduced motion preference) */
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
 }
 
-/* Header styling */
 .App-header {
   background-color: #282c34;
-  width: 100%;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  color: white;
+  justify-content: center;
   font-size: calc(10px + 2vmin);
-  box-sizing: border-box;
-  padding: 20px;
+  color: white;
+  padding: 20px; /* Add padding for better spacing */
 }
 
-/* Links with smooth hover effect */
+/* Adjust for smaller screens */
+@media (max-width: 768px) {
+  .App-header {
+    font-size: calc(8px + 1.5vmin);
+    padding: 10px; /* Reduced padding on smaller screens */
+  }
+}
+
 .App-link {
   color: #61dafb;
-  text-decoration: none;
-  transition: color 0.3s ease-in-out;
 }
 
-.App-link:hover {
-  color: #21a1f1;
-}
-
-/* Keyframe animation for logo spinning */
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(360deg);
-  }
-}
-
-/* Responsive Media Queries */
-
-/* Tablets and medium screens */
-@media screen and (max-width: 1024px) {
-  .App-header {
-    font-size: calc(8px + 2vmin);
-  }
-
-  .App-logo {
-    height: 35vmin;
-  }
-}
-
-/* Mobile landscape */
-@media screen and (max-width: 768px) {
-  .App-header {
-    font-size: calc(7px + 2vmin);
-    padding: 10px;
-  }
-
-  .App-logo {
-    height: 30vmin;
-  }
-}
-
-/* Mobile portrait */
-@media screen and (max-width: 480px) {
-  .App-header {
-    font-size: calc(6px + 2vmin);
-    padding: 8px;
-  }
-
-  .App-logo {
-    height: 25vmin;
-  }
-}
-
-/* Extra small devices (phones) */
-@media screen and (max-width: 320px) {
-  .App-header {
-    font-size: calc(5px + 2vmin);
-    padding: 5px;
-  }
-
-  .App-logo {
-    height: 20vmin;
   }
 }
