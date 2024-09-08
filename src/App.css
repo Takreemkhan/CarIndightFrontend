@@ -4,17 +4,24 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
   width: 100%;
 }
 
-/* Logo styling */
+/* Logo styling with Grid for better scaling */
 .App-logo {
   height: 40vmin;
   pointer-events: none;
-  max-width: 100%; /* Ensures logo scales within its container */
+  max-width: 100%;
+  display: grid;
+  place-items: center; /* Centers the logo inside the grid */
 }
 
-/* Reduce motion for users who prefer it */
+/* Animation for the logo (with reduced motion preference) */
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -24,30 +31,30 @@
 /* Header styling */
 .App-header {
   background-color: #282c34;
+  width: 100%;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
   color: white;
-  padding: 20px;
+  font-size: calc(10px + 2vmin);
   box-sizing: border-box;
-  width: 100%; /* Ensures header takes full width */
+  padding: 20px;
 }
 
-/* Link styling */
+/* Links with smooth hover effect */
 .App-link {
   color: #61dafb;
   text-decoration: none;
-  transition: color 0.3s ease;
+  transition: color 0.3s ease-in-out;
 }
 
 .App-link:hover {
   color: #21a1f1;
 }
 
-/* Animation for logo spin */
+/* Keyframe animation for logo spinning */
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -57,13 +64,12 @@
   }
 }
 
-/* Media Queries for Responsiveness */
+/* Responsive Media Queries */
 
-/* Tablet and small screens */
+/* Tablets and medium screens */
 @media screen and (max-width: 1024px) {
   .App-header {
     font-size: calc(8px + 2vmin);
-    padding: 15px;
   }
 
   .App-logo {
@@ -95,7 +101,7 @@
   }
 }
 
-/* Extra small devices */
+/* Extra small devices (phones) */
 @media screen and (max-width: 320px) {
   .App-header {
     font-size: calc(5px + 2vmin);
